@@ -1,11 +1,13 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 export default function Header() {
   return (
     <View style = {styles.header}>
       {/* <Text style = {{color:'white'}}>Header</Text> */}
-      <Image source = {require('../../assets/Iglogo.webp')} style = {{width: 90, height: 30, marginLeft: 5}}/>
+      <TouchableOpacity>  
+        <Image source = {require('../../assets/Iglogo.webp')} style = {{width: 90, height: 30, marginLeft: 5}}/>
+      </TouchableOpacity>
       <View style = {{flexDirection: 'row', marginRight: 5}}>
        <Text style = {{color: 'white', marginLeft: 10}}>A</Text>
        <Text style = {{color: 'white', marginLeft: 10}}>B</Text>
