@@ -8,10 +8,13 @@ export default function Header() {
       <TouchableOpacity>  
         <Image source = {require('../../assets/Iglogo.webp')} style = {{width: 90, height: 30, marginLeft: 5}}/>
       </TouchableOpacity>
-      <View style = {{flexDirection: 'row', marginRight: 5}}>
-       <Text style = {{color: 'white', marginLeft: 10}}>A</Text>
-       <Text style = {{color: 'white', marginLeft: 10}}>B</Text>
-       <Text style = {{color: 'white', marginLeft: 10}}>C</Text>
+      <View style = {{flexDirection: 'row', marginRight: 5, alignItems: 'center'}}>
+        <TouchableOpacity>
+       <Image style = {styles.links} source = {require('../../assets/like.png')}/>
+        </TouchableOpacity>
+       <TouchableOpacity>
+        <Image style = {styles.links} source = {require('../../assets/message.png')}/>
+       </TouchableOpacity>
       </View>
     </View>
   )
@@ -25,5 +28,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+    },
+
+    links : {
+      width:25,
+      height: 25,
+      // backgroundColor: 'blue',
+      color: 'white',
+      marginLeft: 25,
     }
 })
